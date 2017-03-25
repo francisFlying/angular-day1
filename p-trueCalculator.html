@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table {
+            width: 260px;
+            height: 320px;
+            border:1px solid grey;
+            margin: 20px auto;
+        }
+        td {
+            border: 1px solid grey;
+            padding: 10px auto;
+            text-align:center;
+            background-color: deeppink;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <table ng-app="app" ng-controller="controller">
+        <tr>
+            <td colspan="5" height="50" ng-model="sum"></td>
+        </tr>
+        <tr>
+            <td>MC</td>
+            <td>MR</td>
+            <td>MS</td>
+            <td>M+</td>
+            <td>M-</td>
+        </tr>
+        <tr>
+            <td>←</td>
+            <td>CE</td>
+            <td>C</td>
+            <td>±</td>
+            <td>√</td>
+        </tr>
+        <tr>
+            <td ng-model="val7">7</td>
+            <td ng-model="val8">8</td>
+            <td ng-model="val9">9</td>
+            <td>/</td>
+            <td>%</td>
+        </tr>
+        <tr>
+            <td ng-model="val4">4</td>
+            <td ng-model="val5">5</td>
+            <td ng-model="val6">6</td>
+            <td>*</td>
+            <td>1/x</td>
+        </tr>
+        <tr>
+            <td ng-model="val1">1</td>
+            <td ng-model="val2">2</td>
+            <td ng-model="val3">3</td>
+            <td>-</td>
+            <td rowspan="2">=</td>
+        </tr>
+        <tr>
+            <td colspan="2">0</td>
+            <td>.</td>
+            <td>+</td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript">
+    	var app=angular.module("app",[]);
+
+    </script>
+</body>
+</html>

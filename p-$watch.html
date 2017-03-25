@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div ng-app="app" ng-controller="controller">
+		<input type="text" ng-model="val"></input>
+		<p>{{val}}</p>
+	</div>
+</body>
+<script type="text/javascript" src="../angular.js"></script>
+<script type="text/javascript">
+	var app=angular.module("app",[]);
+	app.controller("controller",function($scope){
+		$scope.val=1;
+		$scope.$watch("val",function(newV,oldV){
+			console.log(newV);
+			console.log(oldV);
+		})
+	})
+</script>
+</html>
